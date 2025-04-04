@@ -2,11 +2,11 @@ import re
 
 
 regex_patterns = {
-    "numero_telefono": r"\b\d{3}[-.\s]?\d{3}[-.\s]?\d{4}\b",
-    "cumpleaños": r"\b\d{2}/\d{2}/\d{4}\b|\b\d{4}-\d{2}-\d{2}\b",  
-    "contraseña_8_caracteres": r"\b[a-zA-Z0-9]{8}\b",  
+    "numero_telefono": r"\d{3}[-.\s]?\d{3}[-.\s]?\d{4}",
+    "cumpleaños": r"\d{2}/\d{2}/\d{4}|\d{4}-\d{2}-\d{2}",  
+    "contraseña_8_caracteres": r"[a-zA-Z0-9]{8}",  
     "sitio_web": r"https://[^\s]+",  
-    "numero_tarjeta": r"\b(?:\d[ -]*?){13,16}\b",  
+    "numero_tarjeta": r"(?:\d[ -]*?){13,16}",  
 }
 
 def buscar_en_texto(texto):
@@ -27,7 +27,7 @@ def buscar_en_texto(texto):
 ejemplos = """
 Numero de telefono: 123-456-7890 
 Cumpleaños: 05/12/1999
-Contraseña: ad203040
+Contraseña: ab203040
 Tarjeta de crédito: 1234 5678 9012 3456.
 Sitio web: https://www.sitioweb.com 
 """
